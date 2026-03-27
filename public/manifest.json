@@ -1,0 +1,39 @@
+{
+  "name": "French Cloze — B1/B2",
+  "short_name": "French Cloze",
+  "description": "Apprenez le français avec des exercices à trous et la répétition espacée. Niveaux B1 et B2 du CECRL.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "orientation": "portrait",
+  "lang": "fr",
+  "categories": ["education", "language"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Pratiquer",
+      "url": "/practice",
+      "description": "Commencer une session de révision"
+    }
+  ]
+}
