@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import DashboardStats from '@/components/DashboardStats'
 import LevelFilter from '@/components/LevelFilter'
@@ -9,6 +10,7 @@ import { syncProgress } from '@/lib/sync'
 
 export default function Home() {
   const [email, setEmail] = useState<string | null>(null)
+  const router = useRouter()
 
   useEffect(() => {
     const run = async () => {
@@ -16,35 +18,37 @@ export default function Home() {
       const { data } = await supabase.auth.getUser()
       const user = data.user
       setEmail(user?.email ?? null)
-
       if (user) {
-        // Silent background sync — localStorage wins on conflict unless remote is newer
         syncProgress(supabase, user.id).catch(() => {})
       }
     }
-
     run()
   }, [])
 
+  const handleSignOut = async () => {
+    const supabase = createClient()
+    await supabase.auth.signOut()
+    router.push('/auth/sign-in')
+  }
+
   return (
     <div className="space-y-6">
-      <div className="space-y-1 pt-2">
-        <h1 className="text-2xl font-bold text-white tracking-tight">
-          🇫🇷 French Cloze
-        </h1>
-        <p className="text-sm text-zinc-400">
-          Répétition espacée · CECRL
-        </p>
-
-        <p className="text-xs text-zinc-500">
-          {email ? (
-            `Connecté en tant que ${email}`
-          ) : (
-            <Link href="/auth/sign-in" className="hover:text-zinc-300 transition-colors underline underline-offset-2">
-              Sign in to sync your progress →
-            </Link>
+      <div className="flex items-start justify-between pt-2">
+        <div className="space-y-1">
+          <h1 className="text-2xl font-bold text-white tracking-tight">
+            🇫🇷 French Cloze
+          </h1>
+          <p className="text-sm text-zinc-400">Répétition espacée · CECRL</p>
+          {email && (
+            <p className="text-xs text-zinc-500">{email}</p>
           )}
-        </p>
+        </div>
+        <button
+          onClick={handleSignOut}
+          className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors mt-1 shrink-0"
+        >
+          Sign out
+        </button>
       </div>
 
       <LevelFilter />

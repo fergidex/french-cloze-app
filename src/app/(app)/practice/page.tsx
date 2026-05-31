@@ -66,17 +66,14 @@ export default function PracticePage() {
     (rating: SRSRating) => {
       if (!currentItem) return;
 
-      // Apply SM-2
       const freshCard = getCardProgress(currentItem.sentence.id);
       const updated = applyReview(freshCard, rating);
       saveCardProgress(updated);
 
-      // Push to Supabase if signed in (fire-and-forget)
       if (userIdRef.current) {
         pushCard(createClient(), userIdRef.current, updated).catch(() => {});
       }
 
-      // If "again" or "hard", re-queue the card at the end
       if (rating === "again" || rating === "hard") {
         const requeued: SessionCard = {
           sentence: currentItem.sentence,
@@ -117,7 +114,6 @@ export default function PracticePage() {
 
   return (
     <div className="space-y-6">
-      {/* Progress bar */}
       <div className="space-y-2">
         <div className="flex justify-between text-xs text-zinc-500">
           <span>
@@ -133,19 +129,15 @@ export default function PracticePage() {
         </div>
       </div>
 
-      {/* Main cloze card */}
       <div className="bg-zinc-900 rounded-3xl p-5 shadow-xl ring-1 ring-zinc-800 min-h-[200px] flex flex-col justify-between gap-6">
         <ClozeCard
           key={currentItem.sentence.id + "-" + index}
           sentence={currentItem.sentence}
           onCorrect={handleCorrect}
         />
-
-        {/* SRS buttons appear after correct answer */}
         {phase === "rating" && <SRSButtons onRate={handleRate} />}
       </div>
 
-      {/* Quit link */}
       <div className="text-center">
         <Link
           href="/"

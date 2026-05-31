@@ -41,7 +41,7 @@ function cardToRow(userId: string, card: CardProgress): DbRow & { user_id: strin
   }
 }
 
-// Newer lastReview wins; if both null, remote wins (it may have data from another device)
+// Newer lastReview wins; if both null, remote wins (may have data from another device)
 function mergeCard(local: CardProgress, remote: CardProgress): CardProgress {
   if (!local.lastReview) return remote
   if (!remote.lastReview) return local
@@ -59,28 +59,38 @@ export async function syncProgress(supabase: SupabaseClient, userId: string): Pr
   const remoteCards = (data as DbRow[]).map(rowToCard)
   const localCards = getAllProgress()
 
-  const remoteMap = new Map(remoteCards.map((c) => [c.sentenceId, c]))
-  const localMap = new Map(localCards.map((c) => [c.sentenceId, c]))
+  const localById: Record<number, CardProgress> = {}
+  for (const c of localCards) localById[c.sentenceId] = c
 
-  const merged: CardProgress[] = []
+  const remoteById: Record<number, CardProgress> = {}
+  for (const c of remoteCards) remoteById[c.sentenceId] = c
+
+  // Collect all sentence IDs seen on either side
+  const seen = new Set<number>()
+  localCards.forEach((c) => seen.add(c.sentenceId))
+  remoteCards.forEach((c) => seen.add(c.sentenceId))
+  const allIds = Array.from(seen)
+
   const toUpsert: ReturnType<typeof cardToRow>[] = []
 
-  for (const local of localCards) {
-    const remote = remoteMap.get(local.sentenceId)
-    const winner = remote ? mergeCard(local, remote) : local
-    merged.push(winner)
-    // Only upsert cards that have been touched (avoids writing 100 blank rows on first sync)
+  for (const id of allIds) {
+    const local = localById[id]
+    const remote = remoteById[id]
+
+    let winner: CardProgress
+    if (local && remote) {
+      winner = mergeCard(local, remote)
+    } else {
+      winner = (local ?? remote)!
+    }
+
+    saveCardProgress(winner)
+
     if (winner.lastReview !== null) {
       toUpsert.push(cardToRow(userId, winner))
     }
   }
 
-  // Persist merged result locally
-  for (const card of merged) {
-    saveCardProgress(card)
-  }
-
-  // Push merged result to Supabase
   if (toUpsert.length > 0) {
     await supabase.from('card_progress').upsert(toUpsert, { onConflict: 'user_id,sentence_id' })
   }

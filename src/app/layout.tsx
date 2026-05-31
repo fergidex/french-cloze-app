@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
   title: "French Cloze — B1/B2",
@@ -38,10 +37,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <body className="min-h-screen bg-zinc-950 antialiased">
-        <main className="max-w-lg mx-auto px-4 pt-6 pb-nav min-h-screen">
-          {children}
-        </main>
-        <NavBar />
+        {children}
       </body>
     </html>
   );
