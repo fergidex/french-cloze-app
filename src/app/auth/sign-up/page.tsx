@@ -7,7 +7,7 @@ import { createClient } from '@/lib/supabase'
 
 type Phase = 'idle' | 'loading' | 'error'
 
-export default function SignInPage() {
+export default function SignUpPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [phase, setPhase] = useState<Phase>('idle')
@@ -27,12 +27,14 @@ export default function SignInPage() {
     setErrorMsg('')
 
     const supabase = createClient()
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    const { error } = await supabase.auth.signUp({ email, password })
 
     if (error) {
       setErrorMsg(error.message)
       setPhase('error')
     } else {
+      // If email confirmation is disabled in Supabase, the session is set immediately.
+      // If enabled, the user will need to confirm before signing in.
       router.push('/')
       router.refresh()
     }
@@ -44,7 +46,7 @@ export default function SignInPage() {
         <div className="text-center space-y-2">
           <div className="text-4xl">🇫🇷</div>
           <h1 className="text-2xl font-bold text-white tracking-tight">French Cloze</h1>
-          <p className="text-sm text-zinc-400">Sign in to sync your progress</p>
+          <p className="text-sm text-zinc-400">Create an account to save your progress</p>
         </div>
 
         <div className="bg-zinc-900 rounded-3xl p-6 ring-1 ring-zinc-800 shadow-xl">
@@ -68,7 +70,7 @@ export default function SignInPage() {
 
             <div className="space-y-1.5">
               <label htmlFor="password" className="text-xs font-medium text-zinc-400 uppercase tracking-wider">
-                Password
+                Password <span className="normal-case text-zinc-600">(min. 6 characters)</span>
               </label>
               <input
                 id="password"
@@ -77,7 +79,7 @@ export default function SignInPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
                 required
-                autoComplete="current-password"
+                autoComplete="new-password"
                 className="w-full bg-zinc-800 border border-zinc-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-xl px-4 py-3 text-white placeholder-zinc-500 text-sm outline-none transition-colors"
               />
             </div>
@@ -91,15 +93,15 @@ export default function SignInPage() {
               disabled={phase === 'loading' || !email || !password}
               className="w-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-xl py-3 text-sm transition-colors"
             >
-              {phase === 'loading' ? 'Signing in…' : 'Sign in'}
+              {phase === 'loading' ? 'Creating account…' : 'Create account'}
             </button>
           </form>
         </div>
 
         <p className="text-center text-xs text-zinc-500">
-          No account?{' '}
-          <Link href="/auth/sign-up" className="text-zinc-300 hover:text-white transition-colors underline underline-offset-2">
-            Create one
+          Already have an account?{' '}
+          <Link href="/auth/sign-in" className="text-zinc-300 hover:text-white transition-colors underline underline-offset-2">
+            Sign in
           </Link>
         </p>
       </div>
