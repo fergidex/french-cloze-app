@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import ClozeCard from "@/components/ClozeCard";
 import SRSButtons from "@/components/SRSButtons";
@@ -9,6 +9,8 @@ import type { CEFRLevel } from "@/types";
 import { applyReview } from "@/lib/sm2";
 import { sentences } from "@/data/sentences";
 import type { CardProgress, SRSRating, Sentence } from "@/types";
+import { createClient } from "@/lib/supabase";
+import { pushCard } from "@/lib/sync";
 
 type SessionPhase = "loading" | "answering" | "rating" | "done";
 
@@ -23,6 +25,13 @@ export default function PracticePage() {
   const [phase, setPhase] = useState<SessionPhase>("loading");
   const [sessionTotal, setSessionTotal] = useState(0);
   const [sessionCorrect, setSessionCorrect] = useState(0);
+  const userIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    createClient().auth.getUser().then(({ data }) => {
+      userIdRef.current = data.user?.id ?? null;
+    });
+  }, []);
 
   // Load due cards on mount
   useEffect(() => {
@@ -61,6 +70,11 @@ export default function PracticePage() {
       const freshCard = getCardProgress(currentItem.sentence.id);
       const updated = applyReview(freshCard, rating);
       saveCardProgress(updated);
+
+      // Push to Supabase if signed in (fire-and-forget)
+      if (userIdRef.current) {
+        pushCard(createClient(), userIdRef.current, updated).catch(() => {});
+      }
 
       // If "again" or "hard", re-queue the card at the end
       if (rating === "again" || rating === "hard") {

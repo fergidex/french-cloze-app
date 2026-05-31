@@ -5,6 +5,7 @@ import Link from 'next/link'
 import DashboardStats from '@/components/DashboardStats'
 import LevelFilter from '@/components/LevelFilter'
 import { createClient } from '@/lib/supabase'
+import { syncProgress } from '@/lib/sync'
 
 export default function Home() {
   const [email, setEmail] = useState<string | null>(null)
@@ -13,7 +14,13 @@ export default function Home() {
     const run = async () => {
       const supabase = createClient()
       const { data } = await supabase.auth.getUser()
-      setEmail(data.user?.email ?? null)
+      const user = data.user
+      setEmail(user?.email ?? null)
+
+      if (user) {
+        // Silent background sync — localStorage wins on conflict unless remote is newer
+        syncProgress(supabase, user.id).catch(() => {})
+      }
     }
 
     run()
@@ -30,7 +37,13 @@ export default function Home() {
         </p>
 
         <p className="text-xs text-zinc-500">
-          {email ? `Connecté en tant que ${email}` : 'Pas encore connecté'}
+          {email ? (
+            `Connecté en tant que ${email}`
+          ) : (
+            <Link href="/auth/sign-in" className="hover:text-zinc-300 transition-colors underline underline-offset-2">
+              Sign in to sync your progress →
+            </Link>
+          )}
         </p>
       </div>
 
