@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   const code = searchParams.get('code')
 
   if (code) {
-    const cookieStore = await cookies()
+    const cookieStore = cookies()
 
     const supabase = createServerClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -32,6 +32,5 @@ export async function GET(request: Request) {
     }
   }
 
-  // Something went wrong — send back to sign-in
   return NextResponse.redirect(`${origin}/auth/sign-in`)
 }
