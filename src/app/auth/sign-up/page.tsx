@@ -10,6 +10,7 @@ type Phase = 'idle' | 'loading' | 'error'
 export default function SignUpPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirm, setConfirm] = useState('')
   const [phase, setPhase] = useState<Phase>('idle')
   const [errorMsg, setErrorMsg] = useState('')
   const router = useRouter()
@@ -19,6 +20,11 @@ export default function SignUpPage() {
 
     if (password.length < 6) {
       setErrorMsg('Password must be at least 6 characters.')
+      setPhase('error')
+      return
+    }
+    if (password !== confirm) {
+      setErrorMsg('Passwords do not match.')
       setPhase('error')
       return
     }
@@ -33,8 +39,6 @@ export default function SignUpPage() {
       setErrorMsg(error.message)
       setPhase('error')
     } else {
-      // If email confirmation is disabled in Supabase, the session is set immediately.
-      // If enabled, the user will need to confirm before signing in.
       router.push('/')
       router.refresh()
     }
@@ -84,13 +88,29 @@ export default function SignUpPage() {
               />
             </div>
 
+            <div className="space-y-1.5">
+              <label htmlFor="confirm" className="text-xs font-medium text-zinc-400 uppercase tracking-wider">
+                Confirm password
+              </label>
+              <input
+                id="confirm"
+                type="password"
+                value={confirm}
+                onChange={(e) => setConfirm(e.target.value)}
+                placeholder="••••••••"
+                required
+                autoComplete="new-password"
+                className="w-full bg-zinc-800 border border-zinc-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-xl px-4 py-3 text-white placeholder-zinc-500 text-sm outline-none transition-colors"
+              />
+            </div>
+
             {phase === 'error' && (
               <p className="text-red-400 text-sm">{errorMsg}</p>
             )}
 
             <button
               type="submit"
-              disabled={phase === 'loading' || !email || !password}
+              disabled={phase === 'loading' || !email || !password || !confirm}
               className="w-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-xl py-3 text-sm transition-colors"
             >
               {phase === 'loading' ? 'Creating account…' : 'Create account'}
