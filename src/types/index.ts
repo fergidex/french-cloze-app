@@ -36,8 +36,7 @@ export interface Sentence {
   level: CEFRLevel;
   category: GrammarCategory;
   explanation: string; // Grammar explanation — not displayed yet, for future use
-  // Prompt clarity fields
-  englishMeaning?: string;      // English translation shown when the intended word is otherwise ambiguous
+  englishMeaning: string;        // English translation always shown below the sentence
   acceptedAnswers?: string[];   // Additional correct answers beyond the primary
   strictAccentMode?: boolean;   // If true, accents must match exactly; default false (normalized comparison)
 }
