@@ -286,6 +286,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "The imparfait describes habitual or repeated actions in the past ('used to'). 'Quand j'étais enfant' is a classic imparfait context. 'Jouer' → je jouais.",
+    englishMeaning: "When I was a child, I used to play every day in the big garden.",
   },
   {
     id: 32,
@@ -304,6 +305,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for an ongoing action (reading) interrupted by a sudden event in passé composé (phone rang). 'Lire' → elle lisait. Note the irregular stem: lis- → lisait.",
+    englishMeaning: "She was reading quietly when the phone suddenly rang.",
   },
   {
     id: 34,
@@ -322,6 +324,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for an ongoing background state (sleeping) interrupted by a sudden event (thunder, passé composé). 'Dormir' → ils dormaient.",
+    englishMeaning: "The children were sleeping peacefully when the thunder suddenly rumbled.",
   },
   {
     id: 36,
@@ -331,6 +334,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for repeated/habitual actions ('chaque été' is the key time marker). 'Aimer' → il/elle aimait. Regular -er verb: stem + -ait.",
+    englishMeaning: "Every summer, the whole family loved to get together in that big house.",
   },
   {
     id: 37,
@@ -349,6 +353,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for a repeated mental state or emotion. 'Penser' → il pensait. Mental/emotional verbs (croire, savoir, penser, vouloir) typically use the imparfait for background states.",
+    englishMeaning: "He often thought about his childhood friends he had lost touch with.",
   },
 
   // ─── PASSÉ COMPOSÉ (7) ───────────────────────────────────────────────────────
@@ -387,6 +392,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Recevoir' → past participle reçu (irregular). Other irregular past participles: voir→vu, boire→bu, connaître→connu.",
+    englishMeaning: "I received a very important letter from my notary this morning.",
   },
   {
     id: 43,
@@ -405,6 +411,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Égarer' → past participle égaré (regular -er verb). No agreement because the COD 'son passeport' follows the verb.",
+    englishMeaning: "He had misplaced his passport somewhere in the house before the trip.",
   },
   {
     id: 45,
@@ -804,6 +811,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "Gérondif for means or method. 'Travailler' → present participle travaillant. The gérondif subject must be the same as the main clause subject.",
+    englishMeaning: "She brilliantly passed her exam by working very regularly for a year.",
   },
   {
     id: 88,
