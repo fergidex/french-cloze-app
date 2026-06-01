@@ -10,6 +10,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Il faut que' always triggers the subjunctive. 'Finir' → subjonctif présent tu: finisses. Regular -ir verbs in the subjunctive use the 3rd-person plural stem: finiss-.",
+    englishMeaning: "You have to finish your homework before going out tonight.",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Vouloir que' triggers the subjunctive. 'Venir' is irregular in the subjunctive: je vienne, tu viennes, il vienne, nous venions, vous veniez, ils viennent.",
+    englishMeaning: "I want you to come to the meeting tomorrow without exception.",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Bien que' is a concessive conjunction that always requires the subjunctive. 'Être' is irregular: je sois, tu sois, il soit, nous soyons, vous soyez, ils soient.",
+    englishMeaning: "Although he is tired, he keeps working tirelessly.",
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Douter que' triggers the subjunctive because it expresses doubt. 'Pouvoir' → subjunctive: je puisse, tu puisses, il puisse, nous puissions, vous puissiez, ils puissent.",
+    englishMeaning: "She doubts that her friend can really help her in this situation.",
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "Impersonal expressions of necessity ('il est essentiel que') require the subjunctive. 'Savoir' → subjunctive nous: sachions (irregular stem: sach-).",
+    englishMeaning: "It is essential that we know the truth before making a decision.",
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Pour que' is a purpose conjunction that always requires the subjunctive. 'Être' → subjunctive il/elle: soit.",
+    englishMeaning: "For the meeting to be productive, you have to prepare well.",
   },
   {
     id: 7,
@@ -64,6 +70,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "The subjunctive is used in relative clauses when the antecedent is indefinite or hypothetical ('quelqu'un qui…'). 'Parler' → subjunctive il/elle: parle (same as indicative for -er verbs, but triggered by context).",
+    englishMeaning: "I am looking for someone who speaks Mandarin and Japanese fluently.",
   },
   {
     id: 8,
@@ -73,6 +80,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "The subjunctive is used in relative clauses with superlatives or restrictive expressions ('le seul', 'le premier', 'l'unique'). 'Avoir' → subjunctive il/elle: ait.",
+    englishMeaning: "It is the only decision that really makes sense in this context.",
   },
   {
     id: 9,
@@ -82,6 +90,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Avant que' requires the subjunctive. 'Partir' → subjunctive tu: partes. Note the optional expletive 'ne' (ne explétif) after 'avant que' in formal registers.",
+    englishMeaning: "Before you leave, tell me exactly what happened.",
   },
   {
     id: 10,
@@ -91,6 +100,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Il est dommage que' triggers the subjunctive. This is the subjonctif passé (perfect subjunctive): auxiliary in subjunctive + past participle. 'Avoir' → subjunctive vous: ayez (+ raté).",
+    englishMeaning: "It is a shame that you missed that extraordinary show.",
   },
   {
     id: 11,
@@ -100,6 +110,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Quoique' (although) is a concessive conjunction requiring the subjunctive. This is the subjonctif passé: 'ait travaillé'. 'Avoir' → subjunctive il/elle: ait.",
+    englishMeaning: "Although she had worked a lot, she did not get the position.",
   },
   {
     id: 12,
@@ -109,6 +120,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Il est peu probable que' expresses strong doubt, triggering the subjunctive. 'Arriver' → subjunctive il/elle: arrive (same spelling as indicative for -er verbs, but the mode is different).",
+    englishMeaning: "It is unlikely that he will arrive on time for the official ceremony.",
   },
 
   // ─── CONDITIONNEL PRÉSENT (10) ───────────────────────────────────────────────
@@ -120,6 +132,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "Type-2 hypothetical si clause: si + imparfait → conditionnel présent. 'Voyager' → je voyagerais. Regular -er verb conditional: infinitive + -ais.",
+    englishMeaning: "If I had more time, I would travel more abroad.",
   },
   {
     id: 14,
@@ -129,6 +142,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "The conditionnel présent expresses a wish or desire. 'Aimer' → il aimerait. Regular -er verbs: infinitive + -ait.",
+    englishMeaning: "He would really like to settle in the countryside, far from the urban bustle.",
   },
   {
     id: 15,
@@ -138,6 +152,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'À ta place' signals advice expressed through the conditional. 'Prendre' is irregular: stem prendr- + -ais → prendrais. Other irregulars: faire→ferais, aller→irais.",
+    englishMeaning: "In your place, I wouldn't take this decision so lightly.",
   },
   {
     id: 16,
@@ -147,6 +162,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "The conditionnel journalistique: the conditional is used in French journalism to present unverified or reported information. 'Envisager' → il envisagerait.",
+    englishMeaning: "According to the media, the minister is reportedly considering a major tax reform.",
   },
   {
     id: 17,
@@ -156,6 +172,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'Devoir' in the conditional expresses advice or recommendation. Irregular stem: devr- + -ais → devrais. Compare: dois (present), devais (imparfait).",
+    englishMeaning: "You really should consult a specialist for this kind of problem.",
   },
   {
     id: 18,
@@ -165,6 +182,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'Être' in the conditional expresses a hypothetical. Irregular stem: ser- + -ait → serait. This is the main clause of a type-2 si clause.",
+    englishMeaning: "It would be wonderful if you could join us for dinner.",
   },
   {
     id: 19,
@@ -174,6 +192,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'Pouvoir' in the conditional expresses a polite suggestion or possibility. Irregular stem: pourr- + -ions → pourrions.",
+    englishMeaning: "We could leave tomorrow morning if everyone agrees.",
   },
   {
     id: 20,
@@ -183,6 +202,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "In reported speech after a past-tense verb ('a déclaré'), the future tense shifts to the conditionnel présent. 'Venir' irregular: viendr- + -ait → viendrait.",
+    englishMeaning: "He declared that he would come to visit us during the summer holidays.",
   },
   {
     id: 21,
@@ -192,6 +212,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'Faire' in the conditional for a counterfactual situation. Irregular stem: fer- + -ais → ferais. 'Sans' + noun often replaces a si clause.",
+    englishMeaning: "Without your invaluable help, I would certainly make a serious mistake.",
   },
   {
     id: 22,
@@ -201,6 +222,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'Pouvoir' in the conditional: polite or hypothetical possibility. Irregular stem: pourr- + -iez → pourriez.",
+    englishMeaning: "You might perhaps have to reimburse the costs if the project fails.",
   },
 
   // ─── CONDITIONNEL PASSÉ (8) ──────────────────────────────────────────────────
@@ -212,6 +234,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "Type-3 si clause (unreal past): si + plus-que-parfait → conditionnel passé. Conditionnel passé = avoir/être in conditional + past participle. 'Avoir' → j'aurais (+ pu).",
+    englishMeaning: "If you had warned me in time, I would have been able to intervene before the problem.",
   },
   {
     id: 24,
@@ -221,6 +244,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "Conditionnel passé with 'venir' (verb of movement using être as auxiliary). → elle serait venue. Note the agreement: venue (feminine).",
+    englishMeaning: "She would have come to the party if she had not been unwell.",
   },
   {
     id: 25,
@@ -230,6 +254,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "'Devoir' in the conditionnel passé expresses a missed obligation or regret. 'Avoir' → il aurait (+ past participle dû).",
+    englishMeaning: "He should have thought more carefully before making such a decision.",
   },
   {
     id: 26,
@@ -239,6 +264,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "'Préférer' in conditionnel passé. Auxiliary 'avoir' → nous aurions (+ past participle préféré). Conditionnel passé = auxiliary in conditional + past participle.",
+    englishMeaning: "We would have preferred a less costly solution for this major project.",
   },
   {
     id: 27,
@@ -248,6 +274,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "Conditionnel passé to speculate about what would have happened. 'Avoir' → tu aurais (+ adoré). This is used without an explicit si clause — the condition is implied.",
+    englishMeaning: "You would have loved this film, I am absolutely sure of it.",
   },
   {
     id: 28,
@@ -257,6 +284,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "Conditionnel passé in a negative counterfactual. 'Sans' replaces a si clause. 'Avoir' → je n'aurais jamais (+ réussi). Note the position of 'jamais' between auxiliary and participle.",
+    englishMeaning: "Without your invaluable help, I would never have passed this difficult exam.",
   },
   {
     id: 29,
@@ -266,6 +294,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "Type-3 si clause. 'Pouvoir' in conditionnel passé. Auxiliary 'avoir' → ils auraient (+ past participle pu).",
+    englishMeaning: "They could have avoided this conflict if they had communicated better from the start.",
   },
   {
     id: 30,
@@ -275,6 +304,7 @@ export const sentences: Sentence[] = [
     category: "conditional_past",
     explanation:
       "Conditionnel passé in reported speech. The original statement was in conditionnel passé, which remains unchanged in indirect speech. 'Avoir' → elle aurait (+ appelé).",
+    englishMeaning: "She told me she would have called if she had had my number.",
   },
 
   // ─── IMPARFAIT (8) ───────────────────────────────────────────────────────────
@@ -286,6 +316,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "The imparfait describes habitual or repeated actions in the past ('used to'). 'Quand j'étais enfant' is a classic imparfait context. 'Jouer' → je jouais.",
+    englishMeaning: "When I was a child, I used to play every day in the big garden.",
   },
   {
     id: 32,
@@ -295,6 +326,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "The imparfait describes a background condition (ongoing rain) while the passé composé marks the foreground event (we arrived). 'Pleuvoir' → il pleuvait.",
+    englishMeaning: "It was pouring with rain when we finally arrived at the station.",
   },
   {
     id: 33,
@@ -304,6 +336,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for an ongoing action (reading) interrupted by a sudden event in passé composé (phone rang). 'Lire' → elle lisait. Note the irregular stem: lis- → lisait.",
+    englishMeaning: "She was reading quietly when the phone suddenly rang.",
   },
   {
     id: 34,
@@ -313,6 +346,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "The imparfait describes a past state or situation (where we used to live). 'Habiter' → nous habitions. Note the -i- before the -ons ending for the nous form.",
+    englishMeaning: "We used to live in Lyon before moving permanently to Paris.",
   },
   {
     id: 35,
@@ -322,6 +356,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for an ongoing background state (sleeping) interrupted by a sudden event (thunder, passé composé). 'Dormir' → ils dormaient.",
+    englishMeaning: "The children were sleeping peacefully when the thunder suddenly rumbled.",
   },
   {
     id: 36,
@@ -331,6 +366,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for repeated/habitual actions ('chaque été' is the key time marker). 'Aimer' → il/elle aimait. Regular -er verb: stem + -ait.",
+    englishMeaning: "Every summer, the whole family loved to get together in that big house.",
   },
   {
     id: 37,
@@ -340,6 +376,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for a past wish, dream, or desire. 'Vouloir' is irregular in many tenses but regular in the imparfait: voul- + -ait → voulait.",
+    englishMeaning: "When she was little, she wanted to become a concert pianist.",
   },
   {
     id: 38,
@@ -349,6 +386,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for a repeated mental state or emotion. 'Penser' → il pensait. Mental/emotional verbs (croire, savoir, penser, vouloir) typically use the imparfait for background states.",
+    englishMeaning: "He often thought about his childhood friends he had lost touch with.",
   },
 
   // ─── PASSÉ COMPOSÉ (7) ───────────────────────────────────────────────────────
@@ -360,6 +398,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Dîner' → past participle dîné (regular -er verb: drop -er, add -é). No agreement with subject when using avoir.",
+    englishMeaning: "We dined in an excellent restaurant in the city centre last night.",
   },
   {
     id: 40,
@@ -369,6 +408,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'être' for verbs of movement and state change (the DR MRS VANDERTRAMP group). 'Arriver' → arrivée. Past participle agrees with the subject (elle → feminine → -e).",
+    englishMeaning: "She arrived in France exactly three years ago to study.",
   },
   {
     id: 41,
@@ -378,6 +418,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Investir' → past participle investi (regular -ir verb: drop -ir, add -i). No agreement with subject when using avoir and the COD follows.",
+    englishMeaning: "They invested all their savings in this ambitious and risky project.",
   },
   {
     id: 42,
@@ -387,6 +428,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Recevoir' → past participle reçu (irregular). Other irregular past participles: voir→vu, boire→bu, connaître→connu.",
+    englishMeaning: "I received a very important letter from my notary this morning.",
   },
   {
     id: 43,
@@ -396,6 +438,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Reflexive verbs use 'être' in passé composé. The past participle agrees with the reflexive pronoun when it is the direct object. 'Se retrouver' → retrouvées (feminine plural agreement with 'elles se').",
+    englishMeaning: "They found each other again after ten long years of involuntary separation.",
   },
   {
     id: 44,
@@ -405,6 +448,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Égarer' → past participle égaré (regular -er verb). No agreement because the COD 'son passeport' follows the verb.",
+    englishMeaning: "He had misplaced his passport somewhere in the house before the trip.",
   },
   {
     id: 45,
@@ -414,6 +458,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Convoquer' → past participle convoqué (regular -er verb). No agreement with subject or with 'tous les employés' because the COD follows the auxiliary.",
+    englishMeaning: "The director summoned all the employees to the large conference room.",
   },
 
   // ─── IMPARFAIT VS PASSÉ COMPOSÉ (10) ────────────────────────────────────────
@@ -425,6 +470,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Background state (imparfait: was sleeping) vs. foreground event (passé composé: I arrived). The sleeping was already in progress when the arrival occurred. 'Dormir' → il dormait.",
+    englishMeaning: "He was sleeping deeply when I arrived at his flat this morning.",
   },
   {
     id: 47,
@@ -434,6 +480,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "'Pendant que' signals two simultaneous ongoing actions, both requiring the imparfait. 'Travailler' → elle travaillait. Both actions were in progress at the same time.",
+    englishMeaning: "While she was working at the office, her husband was quietly making dinner.",
   },
   {
     id: 48,
@@ -443,6 +490,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Ongoing background action (imparfait: we were walking) interrupted by a sudden event (passé composé: it started to rain). 'Marcher' → nous marchions.",
+    englishMeaning: "We were walking in the forest when it started to rain very hard.",
   },
   {
     id: 49,
@@ -452,6 +500,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "'Aller + infinitive' in the imparfait expresses an action that was about to happen when it was interrupted. → j'allais (partir). The interruption is in passé composé: j'ai croisé.",
+    englishMeaning: "I was about to leave when I ran into my former manager in the corridor.",
   },
   {
     id: 50,
@@ -461,6 +510,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "The imparfait describes an extended past ability or state ('used to play well'). 'Jusqu'à l'âge de' marks a past duration, typical for imparfait. 'Jouer' → elle jouait.",
+    englishMeaning: "She used to play the guitar very well until she was about sixteen.",
   },
   {
     id: 51,
@@ -470,6 +520,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Two simultaneous ongoing actions: both require the imparfait. 'Pendant que' + imparfait. 'Visiter' → ils visitaient. 'Attendre' → nous attendions.",
+    englishMeaning: "The tourists were visiting the cathedral while we waited outside.",
   },
   {
     id: 52,
@@ -479,6 +530,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Imparfait + 'depuis' for an ongoing action that had already started. Contrasted with the passé composé for the sudden completed event (l'orage a éclaté). 'Pleuvoir' → pleuvait.",
+    englishMeaning: "It had been raining for two hours when the storm finally broke overhead.",
   },
   {
     id: 53,
@@ -488,6 +540,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "'Aller + infinitive' in the imparfait: she was just about to leave (imminent action). The phone ringing (passé composé) interrupts the imminent action. → elle allait (sortir).",
+    englishMeaning: "She was just about to go out when her phone rang again.",
   },
   {
     id: 54,
@@ -497,6 +550,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Habitual past action (imparfait). 'Tous les étés' is the key marker for repeated/habitual actions → always imparfait, never passé composé. 'Aller' → ils allaient.",
+    englishMeaning: "They used to go to the beach every summer when their children were still young.",
   },
   {
     id: 55,
@@ -506,6 +560,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Imparfait + 'depuis' for an action already in progress for a duration. The passé composé marks the interrupting event. 'Parler' → il parlait. This structure = was speaking (for 10 min) when he entered.",
+    englishMeaning: "The speaker had been speaking for ten minutes when the director walked in.",
   },
 
   // ─── PROPOSITIONS RELATIVES (10) ─────────────────────────────────────────────
@@ -517,6 +572,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Qui' is the subject relative pronoun. It replaces the subject of the relative clause (le film a remporté → qui a remporté). Use 'qui' when the relative pronoun is the subject of its clause.",
+    englishMeaning: "This is the film that won the Palme d'Or at Cannes this year.",
   },
   {
     id: 57,
@@ -526,6 +582,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Dont' replaces 'de + noun'. 'Parler de quelque chose' → dont. Je t'ai parlé de ce livre → le livre dont je t'ai parlé. Use 'dont' after verbs and expressions that take 'de'.",
+    englishMeaning: "Here is the book I told you about with such enthusiasm last week.",
   },
   {
     id: 58,
@@ -535,6 +592,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Où' is the relative pronoun for places (and sometimes times). It replaces 'dans cette ville'. J'habite dans cette ville → la ville où j'habite. 'Où' can replace 'dans lequel/laquelle'.",
+    englishMeaning: "The city where I live is famous for its museums and its gastronomy.",
   },
   {
     id: 59,
@@ -544,6 +602,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Que' is the direct object relative pronoun. Nous avons rencontré l'actrice → l'actrice que nous avons rencontrée. Since the COD (que = l'actrice) precedes 'avoir', the past participle agrees: rencontrée (feminine).",
+    englishMeaning: "The actress we met last night was particularly friendly.",
   },
   {
     id: 60,
@@ -553,6 +612,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Dont' replaces 'de + noun'. 'S'agir de' → dont. Il s'agit de ce problème → le problème dont il s'agit. This is a more formal use of 'dont' with an impersonal expression.",
+    englishMeaning: "The problem dealt with in this report is particularly sensitive.",
   },
   {
     id: 61,
@@ -562,6 +622,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Où' can refer to time as well as place. It replaces 'à cette époque'. À cette époque les voyages étaient lents → l'époque où les voyages étaient lents.",
+    englishMeaning: "The era when travel was much slower is long gone.",
   },
   {
     id: 62,
@@ -571,6 +632,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "Possessive 'dont': replaces 'leur(s)'. Leurs travaux ont été primés → dont les travaux ont été primés. 'Dont' always comes immediately after the antecedent; the rest of the clause follows in normal word order.",
+    englishMeaning: "The students whose work has been awarded prizes are extremely motivated.",
   },
   {
     id: 63,
@@ -580,6 +642,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Où' replaces 'dans lequel' for places. 'Habiter dans cet immeuble' → l'immeuble où mes parents habitaient. 'Où' is simpler and more natural than 'dans lequel' in conversation.",
+    englishMeaning: "The building where my parents lived during their youth has been demolished.",
   },
   {
     id: 64,
@@ -589,6 +652,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "'Dont' after 'être convaincu de'. Je ne suis pas convaincu de ces conclusions → des conclusions dont je ne suis pas convaincu. Always use 'dont' (not 'que') after verbs that take 'de'.",
+    englishMeaning: "These are conclusions I am absolutely not convinced by.",
   },
   {
     id: 65,
@@ -598,6 +662,7 @@ export const sentences: Sentence[] = [
     category: "relative_clauses",
     explanation:
       "Possessive 'dont': tu m'as recommandé ses services → dont tu m'as recommandé les services. Note: after 'dont', the possessive adjective (ses/leur) is replaced by the definite article (les).",
+    englishMeaning: "The person whose services you recommended to me is truly competent.",
   },
 
   // ─── FUTUR ANTÉRIEUR (7) ─────────────────────────────────────────────────────
@@ -609,6 +674,7 @@ export const sentences: Sentence[] = [
     category: "futur_anterieur",
     explanation:
       "After 'quand/lorsque', French uses the futur antérieur (not the present as in English) when the action will be completed before a future reference point. 'Avoir' → vous aurez (+ past participle terminé).",
+    englishMeaning: "When you have finished this detailed report, you will be able to take your leave.",
   },
   {
     id: 67,
@@ -618,6 +684,7 @@ export const sentences: Sentence[] = [
     category: "futur_anterieur",
     explanation:
       "Futur antérieur expresses a future completed action or a supposition about a past event. 'Avoir' → elle aura (+ past participle fini). Formation: futur of avoir/être + past participle.",
+    englishMeaning: "She will no doubt have finished her research before the big presentation.",
   },
   {
     id: 68,
@@ -627,6 +694,7 @@ export const sentences: Sentence[] = [
     category: "futur_anterieur",
     explanation:
       "'Dès que' (as soon as) triggers the futur antérieur, not the present. This is a key difference from English. 'Avoir' → il aura (+ past participle signé).",
+    englishMeaning: "As soon as he has signed the contract, we will finally be able to start the project.",
   },
   {
     id: 69,
@@ -636,6 +704,7 @@ export const sentences: Sentence[] = [
     category: "futur_anterieur",
     explanation:
       "Futur antérieur for a future action that will be completed before another future event. 'Avoir' → nous aurons (+ past participle dîné). Contrast with 'avant que' + subjunctive in the other clause.",
+    englishMeaning: "We will have eaten dinner before you arrive at our place, don't worry.",
   },
   {
     id: 70,
@@ -645,6 +714,7 @@ export const sentences: Sentence[] = [
     category: "futur_anterieur",
     explanation:
       "'Quand' + futur antérieur for a completed future action. 'Avoir' → ils auront (+ past participle pris). 'Prendre fin' = to end/be completed.",
+    englishMeaning: "When the works are finished, the whole neighbourhood will be unrecognisable.",
   },
   {
     id: 71,
@@ -654,6 +724,7 @@ export const sentences: Sentence[] = [
     category: "futur_anterieur",
     explanation:
       "Futur antérieur for a future completed action that precedes another. 'Avoir' → tu auras (+ past participle terminé). The other clause uses 'avant que' + subjunctive.",
+    englishMeaning: "You will have finished your studies long before your brother starts his.",
   },
   {
     id: 72,
@@ -663,6 +734,7 @@ export const sentences: Sentence[] = [
     category: "futur_anterieur",
     explanation:
       "'Une fois que' (once) also triggers the futur antérieur in French. 'Avoir' → il aura (+ past participle résolu). 'Résoudre' has the irregular past participle: résolu.",
+    englishMeaning: "Once he has solved this thorny problem, he will finally be able to rest.",
   },
 
   // ─── VOIX PASSIVE (7) ────────────────────────────────────────────────────────
@@ -674,6 +746,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice in passé composé: subject + avoir (conjugated) + été + past participle. The past participle 'adoptée' agrees with the subject 'loi' (feminine singular). Agent introduced by 'par'.",
+    englishMeaning: "This historic law was adopted by parliament with a large majority.",
   },
   {
     id: 74,
@@ -683,6 +756,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice: 'a été peint'. 'Être' in passé composé (a été) + past participle. 'Peint' agrees with 'tableau' (masculine singular) → no change. The agent is introduced by 'par'.",
+    englishMeaning: "This famous painting was painted by a Flemish master of the 17th century.",
   },
   {
     id: 75,
@@ -692,6 +766,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice: 'a été annulée'. Agreement: réunion (feminine singular) → annulée. Note: 'faute de' = due to lack of. No agent expressed — the agent is unknown or unimportant.",
+    englishMeaning: "The committee meeting was cancelled due to a lack of available participants.",
   },
   {
     id: 76,
@@ -701,6 +776,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice in the future: 'sera + past participle'. 'Être' in futur simple → sera. 'Soumis' is the past participle of 'soumettre' (irregular: soumis). Agreement: rapport (masc. sing.) → soumis.",
+    englishMeaning: "The final report will be submitted to the committee before the end of next month.",
   },
   {
     id: 77,
@@ -710,6 +786,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice: 'a été + past participle'. 'Interpeller' → past participle interpellé. Agreement with 'le suspect' (masculine singular) → interpellé (no change). Agent: par la police.",
+    englishMeaning: "The suspect was stopped by the police during a routine check.",
   },
   {
     id: 78,
@@ -719,6 +796,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice with future: 'sera + past participle'. 'Évaluer' → past participle évalué. Agreement with 'projet' (masculine singular) → évalué (no change needed).",
+    englishMeaning: "The innovative project will be evaluated by a commission of independent experts.",
   },
   {
     id: 79,
@@ -728,6 +806,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice in passé composé with plural subject: 'ont été + past participle'. 'Publié' agrees with 'les résultats' (masculine plural) → publiés. 'Ont' (plural) vs 'a' (singular) matches the plural subject.",
+    englishMeaning: "The complete results were published earlier than expected on the website.",
   },
 
   // ─── DISCOURS INDIRECT (6) ───────────────────────────────────────────────────
@@ -739,6 +818,7 @@ export const sentences: Sentence[] = [
     category: "reported_speech",
     explanation:
       "In indirect speech after a past-tense reporting verb ('a dit'), the future shifts to the conditionnel présent. Direct: 'Je viendrai.' → Indirect: il a dit qu'il viendrait. 'Venir' → il viendrait.",
+    englishMeaning: "He said that he would come to visit us the following week without fail.",
   },
   {
     id: 81,
@@ -748,6 +828,7 @@ export const sentences: Sentence[] = [
     category: "reported_speech",
     explanation:
       "In indirect speech after a past-tense verb ('a demandé'), the present shifts to the imparfait. Direct: 'As-tu du temps libre?' → Indirect: si j'avais du temps libre. 'Avoir' → j'avais.",
+    englishMeaning: "She asked me if I had any free time that weekend.",
   },
   {
     id: 82,
@@ -757,6 +838,7 @@ export const sentences: Sentence[] = [
     category: "reported_speech",
     explanation:
       "In indirect speech, the future shifts to the conditionnel présent. Direct: 'Je prendrai de nouvelles mesures.' → Indirect: qu'il prendrait. 'Prendre' → il prendrait (irregular stem: prendrait).",
+    englishMeaning: "The director announced that he would be taking new measures from the following Monday.",
   },
   {
     id: 83,
@@ -766,6 +848,7 @@ export const sentences: Sentence[] = [
     category: "reported_speech",
     explanation:
       "In indirect speech, the present shifts to the imparfait. Direct: 'Que penses-tu de...?' → Indirect: ce qu'il pensait. Note: 'qu'est-ce que' becomes 'ce que' in indirect questions.",
+    englishMeaning: "She asked him what he thought of this very controversial proposal.",
   },
   {
     id: 84,
@@ -775,6 +858,7 @@ export const sentences: Sentence[] = [
     category: "reported_speech",
     explanation:
       "'Avoir lieu' (to take place) in the future shifts to conditionnel in indirect speech. Direct: 'La réunion aura lieu.' → Indirect: qu'elle aurait lieu. 'Avoir' → aurait.",
+    englishMeaning: "He explained that the meeting would take place the following day at exactly ten o'clock.",
   },
   {
     id: 85,
@@ -784,6 +868,7 @@ export const sentences: Sentence[] = [
     category: "reported_speech",
     explanation:
       "In indirect speech, the passé composé shifts to the plus-que-parfait. Direct: 'J'ai obtenu une promotion.' → Indirect: qu'elle avait obtenu (plus-que-parfait = imparfait of avoir/être + past participle).",
+    englishMeaning: "She confided in us that she had obtained a completely unexpected promotion.",
   },
 
   // ─── GÉRONDIF (6) ────────────────────────────────────────────────────────────
@@ -795,6 +880,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "The gérondif (en + present participle) expresses how or by what means something is done. 'Écouter' → present participle écoutant. Formation: nous form of présent minus -ons + -ant.",
+    englishMeaning: "He considerably improved his level by listening to podcasts every day.",
   },
   {
     id: 87,
@@ -804,6 +890,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "Gérondif for means or method. 'Travailler' → present participle travaillant. The gérondif subject must be the same as the main clause subject.",
+    englishMeaning: "She brilliantly passed her exam by working very regularly for a year.",
   },
   {
     id: 88,
@@ -813,6 +900,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "'Tout en + gérondif' emphasises simultaneous or contradictory actions. 'Poursuivre' → present participle poursuivant. 'Tout en' adds nuance: while at the same time / even while.",
+    englishMeaning: "While continuing his studies, he worked part-time in a neighbourhood café.",
   },
   {
     id: 89,
@@ -822,6 +910,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "Famous French proverb ('practice makes perfect'): C'est en forgeant qu'on devient forgeron. 'Forger' → present participle forgeant. This structure 'C'est en + gérondif' is very common.",
+    englishMeaning: "It is by forging that one becomes a blacksmith — the French equivalent of 'practice makes perfect'.",
   },
   {
     id: 90,
@@ -831,6 +920,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "Gérondif for simultaneous action or manner (he fell while running). 'Courir' → present participle courant (irregular: courons → cour + ant).",
+    englishMeaning: "He fell on the stairs while running far too fast that morning.",
   },
   {
     id: 91,
@@ -840,6 +930,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "Gérondif with 'faire' for a simultaneous activity. 'Faire' → present participle faisant (irregular: faisons → fais + ant → faisant). One of the three irregular present participles in French.",
+    englishMeaning: "She always sings while doing the dishes after the family dinner.",
   },
 
   // ─── PROPOSITIONS EN SI (9) ──────────────────────────────────────────────────
@@ -851,6 +942,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-2 si clause (hypothetical present/future): si + imparfait, main clause + conditionnel présent. 'Si j'avais' (imparfait) → 'je ferais' (conditional). 'Avoir' → j'avais.",
+    englishMeaning: "If I had more money saved, I would take a long trip to Asia.",
   },
   {
     id: 93,
@@ -860,6 +952,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-1 si clause (real possibility): si + présent, main clause + futur or présent. 'S'il fait beau' → présent (not future!). Never use the future or conditional directly after 'si'.",
+    englishMeaning: "If the weather is nice tomorrow, we will be able to have a picnic in the park.",
   },
   {
     id: 94,
@@ -869,6 +962,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-3 si clause (impossible past): si + plus-que-parfait, main clause + conditionnel passé. 'Partir' with 'être' → plus-que-parfait: vous étiez parti(s). Tests knowledge of être as auxiliary.",
+    englishMeaning: "If you had left earlier, you would not have missed the last train.",
   },
   {
     id: 95,
@@ -878,6 +972,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-2 si clause (hypothetical present): si + imparfait, main clause + conditionnel présent. 'Être' → tu étais (imparfait). The conditional 'je me sentirais' follows in the main clause.",
+    englishMeaning: "If you were there, I would feel so much more at ease and safe.",
   },
   {
     id: 96,
@@ -887,6 +982,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-3 si clause expressing regret about the past: si + plus-que-parfait. 'Si seulement' + plus-que-parfait = if only he had... 'Avoir' → il avait (+ past participle écouté).",
+    englishMeaning: "If only he had listened to my advice right from the very beginning of the matter!",
   },
   {
     id: 97,
@@ -896,6 +992,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-1 si clause (real/general): si + présent, main clause + présent/futur/impératif. 'Si tu veux' (présent) → 'tu dois' (présent). 'Devoir' → tu dois.",
+    englishMeaning: "If you really want to succeed, you must train seriously every day.",
   },
   {
     id: 98,
@@ -905,6 +1002,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-2 si clause (hypothetical): si + imparfait, main clause + conditionnel présent. 'Obtenir' is a verb like 'venir': imparfait elle obtenait (stem: obten- + -ait).",
+    englishMeaning: "If she got this important position, she would have to move to Brussels.",
   },
   {
     id: 99,
@@ -914,6 +1012,7 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-3 si clause: 'si j'avais su' (plus-que-parfait), main clause + conditionnel passé. 'Avoir' → je n'aurais jamais (+ past participle accepté). Note: 'jamais' comes between auxiliary and participle.",
+    englishMeaning: "If I had known in advance, I would never have accepted this impossible mission.",
   },
   {
     id: 100,
@@ -923,5 +1022,6 @@ export const sentences: Sentence[] = [
     category: "si_clauses",
     explanation:
       "Type-1 si clause (open condition): si + présent, main clause + impératif. 'Avoir' → vous avez. The main clause uses the imperative: 'n'hésitez pas'. Never use future/conditional after 'si' in this type.",
+    englishMeaning: "If you need help at any time, do not hesitate to call.",
   },
 ];

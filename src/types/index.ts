@@ -36,6 +36,9 @@ export interface Sentence {
   level: CEFRLevel;
   category: GrammarCategory;
   explanation: string; // Grammar explanation — not displayed yet, for future use
+  englishMeaning: string;        // English translation always shown below the sentence
+  acceptedAnswers?: string[];   // Additional correct answers beyond the primary
+  strictAccentMode?: boolean;   // If true, accents must match exactly; default false (normalized comparison)
 }
 
 // SM-2 card progress

@@ -12,6 +12,10 @@ type InputState = "idle" | "wrong" | "correct";
 
 const ACCENTS = ["é", "è", "ê", "ë", "à", "â", "ù", "û", "ç", "î", "ï", "ô", "œ", "æ"] as const;
 
+function normalizeAccents(str: string): string {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 // Coaching-voice fallback hints, one per category, used when the explanation
 // sentences are all contaminated with the answer word.
 const CATEGORY_HINTS: Record<GrammarCategory, string> = {
@@ -139,19 +143,22 @@ export default function ClozeCard({ sentence, onCorrect }: ClozeCardProps) {
         setState("idle");
         return;
       }
-      const answer = sentence.answer.toLowerCase();
-      const typed = value.toLowerCase();
-
-      if (typed === answer) {
+      const normalize = (s: string) =>
+        sentence.strictAccentMode === true
+          ? s.toLowerCase()
+          : normalizeAccents(s.toLowerCase());
+      const typedNorm = normalize(value);
+      const allAnswers = [sentence.answer, ...(sentence.acceptedAnswers ?? [])];
+      if (allAnswers.some((a) => normalize(a) === typedNorm)) {
         setState("correct");
         onCorrect();
-      } else if (answer.startsWith(typed)) {
-        setState("idle"); // still possible — don't flash red yet
+      } else if (allAnswers.some((a) => normalize(a).startsWith(typedNorm))) {
+        setState("idle");
       } else {
         setState("wrong");
       }
     },
-    [sentence.answer, onCorrect]
+    [sentence.answer, sentence.acceptedAnswers, sentence.strictAccentMode, onCorrect]
   );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -223,6 +230,12 @@ export default function ClozeCard({ sentence, onCorrect }: ClozeCardProps) {
         </span>
         <span>{after}</span>
       </div>
+
+      {/* English meaning */}
+      <p className="text-sm text-zinc-500 italic leading-snug">
+        <span className="not-italic text-zinc-600 text-xs font-medium uppercase tracking-wide">en · </span>
+        {sentence.englishMeaning}
+      </p>
 
       {/* Accent character buttons */}
       {state !== "correct" && (
