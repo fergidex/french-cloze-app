@@ -10,6 +10,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "'Il faut que' always triggers the subjunctive. 'Finir' → subjonctif présent tu: finisses. Regular -ir verbs in the subjunctive use the 3rd-person plural stem: finiss-.",
+    englishMeaning: "You have to finish your homework before going out tonight.",
   },
   {
     id: 2,
@@ -46,6 +47,7 @@ export const sentences: Sentence[] = [
     category: "subjunctive",
     explanation:
       "Impersonal expressions of necessity ('il est essentiel que') require the subjunctive. 'Savoir' → subjunctive nous: sachions (irregular stem: sach-).",
+    englishMeaning: "It is essential that we know the truth before making a decision.",
   },
   {
     id: 6,
@@ -120,6 +122,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "Type-2 hypothetical si clause: si + imparfait → conditionnel présent. 'Voyager' → je voyagerais. Regular -er verb conditional: infinitive + -ais.",
+    englishMeaning: "If I had more time, I would travel more abroad.",
   },
   {
     id: 14,
@@ -129,6 +132,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "The conditionnel présent expresses a wish or desire. 'Aimer' → il aimerait. Regular -er verbs: infinitive + -ait.",
+    englishMeaning: "He would really like to settle in the countryside, far from the urban bustle.",
   },
   {
     id: 15,
@@ -138,6 +142,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'À ta place' signals advice expressed through the conditional. 'Prendre' is irregular: stem prendr- + -ais → prendrais. Other irregulars: faire→ferais, aller→irais.",
+    englishMeaning: "In your place, I wouldn't take this decision so lightly.",
   },
   {
     id: 16,
@@ -147,6 +152,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "The conditionnel journalistique: the conditional is used in French journalism to present unverified or reported information. 'Envisager' → il envisagerait.",
+    englishMeaning: "According to the media, the minister is reportedly considering a major tax reform.",
   },
   {
     id: 17,
@@ -174,6 +180,7 @@ export const sentences: Sentence[] = [
     category: "conditional_present",
     explanation:
       "'Pouvoir' in the conditional expresses a polite suggestion or possibility. Irregular stem: pourr- + -ions → pourrions.",
+    englishMeaning: "We could leave tomorrow morning if everyone agrees.",
   },
   {
     id: 20,
@@ -344,6 +351,7 @@ export const sentences: Sentence[] = [
     category: "imparfait",
     explanation:
       "Imparfait for a past wish, dream, or desire. 'Vouloir' is irregular in many tenses but regular in the imparfait: voul- + -ait → voulait.",
+    englishMeaning: "When she was little, she wanted to become a concert pianist.",
   },
   {
     id: 38,
@@ -421,6 +429,7 @@ export const sentences: Sentence[] = [
     category: "passe_compose",
     explanation:
       "Passé composé with 'avoir'. 'Convoquer' → past participle convoqué (regular -er verb). No agreement with subject or with 'tous les employés' because the COD follows the auxiliary.",
+    englishMeaning: "The director summoned all the employees to the large conference room.",
   },
 
   // ─── IMPARFAIT VS PASSÉ COMPOSÉ (10) ────────────────────────────────────────
@@ -450,6 +459,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Ongoing background action (imparfait: we were walking) interrupted by a sudden event (passé composé: it started to rain). 'Marcher' → nous marchions.",
+    englishMeaning: "We were walking in the forest when it started to rain very hard.",
   },
   {
     id: 49,
@@ -513,6 +523,7 @@ export const sentences: Sentence[] = [
     category: "imparfait_passe_compose",
     explanation:
       "Imparfait + 'depuis' for an action already in progress for a duration. The passé composé marks the interrupting event. 'Parler' → il parlait. This structure = was speaking (for 10 min) when he entered.",
+    englishMeaning: "The speaker had been speaking for ten minutes when the director walked in.",
   },
 
   // ─── PROPOSITIONS RELATIVES (10) ─────────────────────────────────────────────
@@ -717,6 +728,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice: 'a été + past participle'. 'Interpeller' → past participle interpellé. Agreement with 'le suspect' (masculine singular) → interpellé (no change). Agent: par la police.",
+    englishMeaning: "The suspect was stopped by the police during a routine check.",
   },
   {
     id: 78,
@@ -726,6 +738,7 @@ export const sentences: Sentence[] = [
     category: "passive_voice",
     explanation:
       "Passive voice with future: 'sera + past participle'. 'Évaluer' → past participle évalué. Agreement with 'projet' (masculine singular) → évalué (no change needed).",
+    englishMeaning: "The innovative project will be evaluated by a commission of independent experts.",
   },
   {
     id: 79,
@@ -821,6 +834,7 @@ export const sentences: Sentence[] = [
     category: "gerund",
     explanation:
       "'Tout en + gérondif' emphasises simultaneous or contradictory actions. 'Poursuivre' → present participle poursuivant. 'Tout en' adds nuance: while at the same time / even while.",
+    englishMeaning: "While continuing his studies, he worked part-time in a neighbourhood café.",
   },
   {
     id: 89,
