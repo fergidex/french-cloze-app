@@ -62,7 +62,10 @@ export default function PracticePage() {
       setPhase(sessionCards.length === 0 ? "done" : "answering");
     };
 
-    init();
+    init().catch((err) => {
+      console.error("Practice init error:", err);
+      setPhase("done");
+    });
   }, []);
 
   const currentItem = queue[index] ?? null;

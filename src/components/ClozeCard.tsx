@@ -231,13 +231,11 @@ export default function ClozeCard({ sentence, onCorrect }: ClozeCardProps) {
         <span>{after}</span>
       </div>
 
-      {/* English meaning for ambiguous sentences */}
-      {sentence.englishMeaning && (
-        <p className="text-sm text-zinc-500 italic leading-snug">
-          <span className="not-italic text-zinc-600 text-xs font-medium uppercase tracking-wide">en · </span>
-          {sentence.englishMeaning}
-        </p>
-      )}
+      {/* English translation */}
+      <p className="text-sm text-zinc-500 italic leading-snug">
+        <span className="not-italic text-zinc-600 text-xs font-medium uppercase tracking-wide">en · </span>
+        {sentence.englishMeaning}
+      </p>
 
       {/* Accent character buttons */}
       {state !== "correct" && (
