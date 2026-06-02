@@ -54,7 +54,7 @@ export async function syncProgress(supabase: SupabaseClient, userId: string): Pr
     .select('sentence_id,interval,repetitions,ease_factor,next_review,last_review,total_correct,total_incorrect')
     .eq('user_id', userId)
 
-  if (error) return
+  if (error) throw error
 
   const remoteCards = (data as DbRow[]).map(rowToCard)
   const localCards = getAllProgress()
