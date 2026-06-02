@@ -10,7 +10,7 @@ import { applyReview } from "@/lib/sm2";
 import { sentences } from "@/data/sentences";
 import type { CardProgress, SRSRating, Sentence } from "@/types";
 import { createClient } from "@/lib/supabase";
-import { pushCard } from "@/lib/sync";
+import { pushCard, syncProgress } from "@/lib/sync";
 
 type SessionPhase = "loading" | "answering" | "rating" | "done";
 
@@ -28,31 +28,41 @@ export default function PracticePage() {
   const userIdRef = useRef<string | null>(null);
 
   useEffect(() => {
-    createClient().auth.getUser().then(({ data }) => {
-      userIdRef.current = data.user?.id ?? null;
-    });
-  }, []);
+    const init = async () => {
+      const supabase = createClient();
+      const { data } = await supabase.auth.getUser();
+      const user = data.user ?? null;
+      userIdRef.current = user?.id ?? null;
 
-  // Load due cards on mount
-  useEffect(() => {
-    const levelFilter = getLevelFilter();
-    const activeLevels = (
-      Object.entries(levelFilter) as [CEFRLevel, boolean][]
-    )
-      .filter(([, on]) => on)
-      .map(([level]) => level);
-    const dueCards = getDueCards(activeLevels.length > 0 ? activeLevels : undefined);
-    const sessionCards: SessionCard[] = dueCards
-      .map((card) => {
-        const sentence = sentences.find((s) => s.id === card.sentenceId);
-        if (!sentence) return null;
-        return { sentence, card };
-      })
-      .filter((x): x is SessionCard => x !== null);
+      if (user) {
+        try {
+          await syncProgress(supabase, user.id);
+        } catch (err) {
+          console.error("Sync failed, proceeding with local progress:", err);
+        }
+      }
 
-    setQueue(sessionCards);
-    setSessionTotal(sessionCards.length);
-    setPhase(sessionCards.length === 0 ? "done" : "answering");
+      const levelFilter = getLevelFilter();
+      const activeLevels = (
+        Object.entries(levelFilter) as [CEFRLevel, boolean][]
+      )
+        .filter(([, on]) => on)
+        .map(([level]) => level);
+      const dueCards = getDueCards(activeLevels.length > 0 ? activeLevels : undefined);
+      const sessionCards: SessionCard[] = dueCards
+        .map((card) => {
+          const sentence = sentences.find((s) => s.id === card.sentenceId);
+          if (!sentence) return null;
+          return { sentence, card };
+        })
+        .filter((x): x is SessionCard => x !== null);
+
+      setQueue(sessionCards);
+      setSessionTotal(sessionCards.length);
+      setPhase(sessionCards.length === 0 ? "done" : "answering");
+    };
+
+    init();
   }, []);
 
   const currentItem = queue[index] ?? null;
